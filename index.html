@@ -82,8 +82,9 @@
 				var p = context.createBufferSource();
 				p.buffer = songBuffer;
 				p.loop=true;
-				var gain = context.createGain();
-				gain.gain.value = 0.3;
+				gain = context.createGain();
+				gain.gain.setValueAtTime(0.01,context.currentTime);
+				gain.gain.exponentialRampToValueAtTime(0.2,context.currentTime+3);
 				p.connect(gain);
 				gain.connect(context.destination);
 				p.start(context.currentTime);
