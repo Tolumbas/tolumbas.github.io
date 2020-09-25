@@ -28,67 +28,48 @@
 	</style>
 </head>
 <body>
-<h1><font color="red">Здравей</font></h1>
+<h1><font color="red">Името ми е Антон</font></h1>
 <div class="container">
-	Здравей!<br>
-	Харесвам хора като теб. <br>
-	Любопитни.<br>
-	Търсещи да се разсеят,<br>
-	от скуката на ежедневния живот<p>
+	Здрасти,<br>
+	Аз съм Tони!<br>
+	Имах расти,<br>
+	панталони,<br>
+	но разпаднаха се,<br>
+	add-наха се<br>
+	в коша за боклук.<br>
+	Живея нов живот -<br>
+	с безгрижието бях до тук!<br>
+	<br>
+	На JavaScript си кодя,<br>
+	на катерене аз ходя.<br>
+	Kомпютърен учен,<br>
+	но въобще не съм скучен:<br>
+	<br>
+	Свиря на китара,<br>
+	лонгборд не спира да се кара.<br>
+	Дай ми планина, отивам!<br>
+	Нямам планове да спирам.<br>
+	<br>
+	В YouTube аз живея,<br>
+	душата в D&D ще си излея.<br>
+	Даже пея.<br>
+	<br>
+	Но всъщност всичко е заради нея...<br>
+	<br>
+
+
+
+
 	
-	Искам да се запознаем. <br>
-	Защото и аз съм като теб.<br>
-	Знам обаче, <br>
-	че еднаквости не се привличат,<br>
-	но, нека ний не сме просто поредните обекти,<br>
-	тласкани от безмилостната физика.<p>
-
-	Нека вместо това да се следваме от философията,<br>
-	Защото, тя казва, че хората са уникални.<br>
-	Само хората обичат мъдростта.<br>
-
-	За това и аз обичам теб,<br>
-	Защото търсиш,<br>
-	защот' душата ти е любопитна.<p>
-
-	Здравей, <br>
-	Аз съм Антон. <br>
-	Пиши ми "аз съм любопитен". <br>
-	Пиши ми "и аз съм човек".<br>
 	<div id="links">
-		<a href="https://www.instagram.com/tolumbas/" target="_blank">Instagram</a> 
+		<a href="https://www.instagram.com/lo.k.fi/" target="_blank">Instagram</a> 
 		|
 		<a href="https://www.facebook.com/tzat.anton" target="_blank">Facebook</a>
 		| 
 		<a href="https://www.github.com/tolumbas" target="_blank">Github</a>
 	</div>
 	<script type="text/javascript">
-		var context = new AudioContext();
-		var songBuffer;
-		fetch("autumn.wav")
-			.then(d=>d.arrayBuffer())
-			.then(d=>context.decodeAudioData(d))
-			.then(buffer=>{
-				songBuffer = buffer;
-				for (var a=0;a<2;a++){
-					var t = songBuffer.getChannelData(a);
-					for (var b = 0;b<t.length/2;b++){
-						t[b] = t[b*2];
-					}
-					for (var b = t.length/2;b<t.length;b++){
-						t[b] = t[b - t.length/2];
-					}
-				}
-				var p = context.createBufferSource();
-				p.buffer = songBuffer;
-				p.loop=true;
-				gain = context.createGain();
-				gain.gain.setValueAtTime(0.01,context.currentTime);
-				gain.gain.exponentialRampToValueAtTime(0.2,context.currentTime+3);
-				p.connect(gain);
-				gain.connect(context.destination);
-				p.start(context.currentTime);
-			})
+		
 	</script>
 </div>
 </body>
