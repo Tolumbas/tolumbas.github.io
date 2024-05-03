@@ -5,16 +5,23 @@
 	<meta charset="utf-8">
 	<link href="https://fonts.googleapis.com/css?family=Anonymous+Pro" rel="stylesheet">
 	<style type="text/css">
-		body{
+		html,body{
+			background-color: #012606;
+			margin:0;
+			padding:0;
+		}
+		.main{
 			font-family: 'Anonymous Pro', monospace;
 			font-size: 1.5em;
 			padding: 0 10%;
+			color:#f2ffcf;
 		}
 		.container{
 			margin-top: 50px;
 		}
 		h1{
 			font-size: 2em;
+			color:#5362b0;
 		}
 		ul{
 			margin-top:20px;
@@ -25,52 +32,55 @@
 		#links{
 			margin-top:100px;
 		}
+		a{
+			color:#389deb;
+		}
+		#lsystem{
+			position:absolute;
+			width:100%;
+			height:100%;
+			z-index: 0;
+			pointer-events: none;
+		}
 	</style>
 </head>
 <body>
-<h1><font color="red">Името ми е Антон</font></h1>
-<div class="container">
-	Здрасти,<br>
-	Аз съм Tони!<br>
-	Имах расти,<br>
-	панталони,<br>
-	но разпаднаха се,<br>
-	add-наха се<br>
-	в коша за боклук.<br>
-	Живея нов живот -<br>
-	с безгрижието бях до тук!<br>
-	<br>
-	На JavaScript си кодя,<br>
-	на катерене аз ходя.<br>
-	Kомпютърен учен,<br>
-	но въобще не съм скучен:<br>
-	<br>
-	Свиря на китара,<br>
-	лонгборд не спира да се кара.<br>
-	Дай ми планина, отивам!<br>
-	Нямам планове да спирам.<br>
-	<br>
-	В YouTube аз живея,<br>
-	душата в D&D ще си излея.<br>
-	Даже пея.<br>
-	<br>
-	Но всъщност всичко е заради нея...<br>
-	<br>
+	<canvas id="lsystem"></canvas>
+	<div class="main">
 
-
-
-
-	
-	<div id="links">
-		<a href="https://www.instagram.com/lo.k.fi/" target="_blank">Instagram</a> 
-		|
-		<a href="https://www.facebook.com/tzat.anton" target="_blank">Facebook</a>
-		| 
-		<a href="https://www.github.com/tolumbas" target="_blank">Github</a>
+		<h1>Кой съм аз?</h1>
+		<div class="container">
+			Здрасти,<br>
+			Аз съм Тони!<br>
+			Имам расти,<br>
+			имам си и всякви страсти:<br>
+			<br>
+			Обичам аз да кодя,<br>
+			всичко дето е във интернета.<br>
+			Обичам и да бродя,<br>
+			по високи планини и по морета,<br>
+			<br>
+			Обичам и да се вживявам,<br>
+			в D&D героини се превъплъщавам,<br>
+			На LARP си ходя ежегодно,<br>
+			в елфски дрехи си ми е удобно.<br>
+			<br>
+			Катеренето ми спорта,<br>
+			насам-натам съм с лонгборда,<br>
+			с огнен пой цветя създавам,<br>
+			чрез китарата се изразявам.<br>
+			<br>
+			Някой ден изкуство от игри ще правя<br>
+			понеже искам обществото да не ме забравя.<br>
+			Но за туй ще трябва страховете да си победя<br>
+			и перфектния си живот да наредя.<br>
+			
+			
+			<div id="links">
+				<a href="https://www.instagram.com/lo.k.fi/" target="_blank">Instagram</a> 
+			</div>
+			<script src="lsystem.js"></script>
+		</div>
 	</div>
-	<script type="text/javascript">
-		
-	</script>
-</div>
 </body>
 </html>
